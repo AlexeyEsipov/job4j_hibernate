@@ -30,17 +30,19 @@ public class CandidateRun {
             session.save(five);
             session.save(six);
 
-            Query query = session.createQuery("from Candidate");
-            for (Object st : query.list()) {
-                System.out.println(st);
+            Query<Candidate> query = session.createQuery("from Candidate", Candidate.class);
+            for (Candidate candidate : query.list()) {
+                System.out.println(candidate);
             }
-            query = session.createQuery("from Candidate can where can.id = :Id");
+            query = session.createQuery("from Candidate can where can.id = :Id", Candidate.class);
             query.setParameter("Id", 3);
             System.out.println(query.uniqueResult());
 
-            query = session.createQuery("from Candidate can where can.name = :Name");
+            query = session.createQuery("from Candidate can where can.name = :Name", Candidate.class);
             query.setParameter("Name", "Alex");
-            System.out.println(query.uniqueResult());
+            for (Candidate candidate : query.list()) {
+                System.out.println(candidate);
+            }
 
             session.createQuery(
                     "update Candidate can "
