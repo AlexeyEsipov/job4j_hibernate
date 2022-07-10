@@ -11,7 +11,7 @@ public class Author {
     private int id;
     private String name;
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private List<Book> books = new ArrayList<>();
+    private Set<Book> books = new HashSet<>();
 
     public static Author of(String name) {
         Author author = new Author();
@@ -36,11 +36,11 @@ public class Author {
     }
 
 
-    public List<Book> getBooks() {
+    public Set<Book> getBooks() {
         return books;
     }
 
-    public void setBooks(List<Book> books) {
+    public void setBooks(Set<Book> books) {
         this.books = books;
     }
 
