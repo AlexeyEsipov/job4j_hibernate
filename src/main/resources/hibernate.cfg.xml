@@ -26,7 +26,11 @@
 <!--        <mapping class="ru.job4j.tomany.Car" />-->
 <!--        <mapping class="ru.job4j.manytomany.Address" />-->
 <!--        <mapping class="ru.job4j.manytomany.Person" />-->
-        <mapping class="ru.job4j.manytomany.Book" />
-        <mapping class="ru.job4j.manytomany.Author" />
+<!--        <mapping class="ru.job4j.manytomany.Book" />-->
+<!--        <mapping class="ru.job4j.manytomany.Author" />-->
+<!--        <mapping class="ru.job4j.lazy.Category" />-->
+<!--        <mapping class="ru.job4j.lazy.Task" />-->
+        <mapping class="ru.job4j.lazy.CarBrand" />
+        <mapping class="ru.job4j.lazy.CarModel" />
     </session-factory>
 </hibernate-configuration>
